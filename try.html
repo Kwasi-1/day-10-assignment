@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function primeNumbers(num){
+      if (num < 2){
+        return `${num} is not prime`
+      }
+
+      if(num >= 2){
+        for(i = 2; i < num; i++){
+          if(num % i === 0){
+            return `${num} is not prime`
+          }
+        }
+        return `${num} is prime`
+      }
+      
+    }
+
+    console.log(primeNumbers(3))
+  </script>
+</body>
+</html>

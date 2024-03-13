@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Numbers</title>
+</head>
+<body>
+  <input type="text" class="js-input">
+  <button onclick="primeNumbers()">Check</button>
+  <p class="js-p"></p>
+  <script>
+    function primeNumbers(){
+      // const inputElement = document.querySelector('.js-input');
+      // num = inputElement.value;
+      // let results = '';
+      // // let results = `${num} is prime`;
+
+      if (num < 2){
+        results = `${num} is not prime`;
+        return results;
+      }
+
+      if(num >= 2){
+        for(i = 2; i < num; i++){
+          if(num % i === 0){
+            results = `${num} is not prime`;
+            return results;
+          }
+        }
+        return results;
+      }
+
+      // document.querySelector('.js-p').innerHTML = results;
+    }
+
+    console.log(primeNumbers());
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Times Table</title>
+</head>
+<body>
+  <p>Times Table</p>
+  <div class="js-div"></div>
+  <script>
+    function timesTable(){
+      //create a number input
+      
+      let num = prompt('enter your number?');
+
+      let timesTableHtml = '';
+
+      for(let i = 1; i <= 12; i++){
+        const product = num * i;
+
+        const html = `<p>${num} x ${i} = ${product}</p>`;
+
+        timesTableHtml += html; 
+      }
+      document.querySelector('.js-div').innerHTML = timesTableHtml; 
+    }
+    timesTable();
+    
+  </script>
+</body>
+</html>
